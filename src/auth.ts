@@ -22,7 +22,6 @@ export async function checkPasswordHash(password: string, hash: string) {
 
 type payload = Pick<JwtPayload, "iss" | "sub" | "iat" | "exp">;
 
-//
 export function makeJWT(userID: string, secret: string, expiresIn: number) {
   const issuedAt = Math.floor(Date.now() / 1000);
   const expiresAt = issuedAt + expiresIn;
